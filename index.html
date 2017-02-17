@@ -45,12 +45,12 @@
           In the meantime, please register to our waiting list to get notified first once something is launched.</p> -->
           <br>
 
-        <form class="form-inline" role="form">
+        <form class="form-inline" role="form" action="http://app.agilejoker.com/users" accept-charset="UTF-8" method="post">
 
-          <div class="form-group"><input type="text" class="form-control input-lg" id="exampleInputPassword2" placeholder="Your Email"></div>
-          <button type="submit" class="btn btn-lg btn-danger btn-custom">Get Started</button>
+          <div class="form-group"><input type="email" class="form-control input-lg" id="user_email" placeholder="Your Email", value="" name="user[email]" required="required"></div>
+          <button type="submit" name="commit" class="btn btn-lg btn-danger btn-custom">Get Started</button>
         </form>
-        <p class="small text-muted">14-day free trial. No credit card required.</p>
+
       </div>
     </div>
     <div class="row">
