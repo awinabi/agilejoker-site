@@ -4,15 +4,101 @@
 body, .content {
 	background: #fff;
 	color:#333;
+	font-family: "Lato", sans-serif;
 }
 
+.bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
+.bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum { font-size: 16px; margin-bottom: 5px;}
+.bs-wizard > .bs-wizard-step .bs-wizard-info { font-size: 16px; background-color: white;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {position: absolute; width: 30px; height: 30px; display: block; background: #fbe8aa; top: 45px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {content: ' '; width: 14px; height: 14px; background: #fbbd19; border-radius: 50px; position: absolute; top: 8px; left: 8px; }
+.bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 20px 0;}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #fbe8aa;}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {width:50%;}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {width:0%;}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {width: 100%;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {background-color: #f5f5f5;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
+.bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
+.bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
+
+
+.card {
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.1);
+}
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: white;
+  background-clip: padding-box;
+}
+.card .card-title {
+    font-size: 24px;
+    padding: 15px;
+}
+.card .card-title h3{
+  margin: 0 0;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}
+.card-content, .card-content li{
+  color: #333;
+}
 
 /********************************************************/
 /*                     Typography                       */
 /********************************************************/
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Open sans", Helvetica, Arial;
-	font-weight: 300;
+	font-weight: normal;
 }
 
 p, .jumbotron p {
@@ -25,6 +111,13 @@ a:hover, a:focus { color: #953726; }
 a:visited { color: #D87563; }
 
 #applogin { color: #ffffff;}
+.highlightedb {
+	background-color: #2980b9;
+	color: white;
+}
+.highlightedb h1, .highlightedb h2, .highlightedb p, .highlightedb p.lead{
+	color: #ffffff;
+}
 /********************************************************/
 /*                        Header                        */
 /********************************************************/
@@ -34,8 +127,15 @@ a:visited { color: #D87563; }
 	margin-bottom: 0;
 	padding-bottom: 0px;
 }
+.header .card h4, .header .card{
+	color: #333;
+}
+.header .card h4{
+	margin-top: 0;
+	font-size: 18px;
+	font-weight: bold;
+}
 .header h1 {
-	font-family: "Open sans", Arial;
 	font-size: 40px;
 	font-weight: bold;
 	margin: 35px 0 10px 0;
@@ -45,8 +145,6 @@ a:visited { color: #D87563; }
 }
 .header h2 {
 	color: rgba(255,255,255,.9);
-	font-family: "Open sans", Helvetica, Arial;
-	font-family: Georgia;
 	font-size: 17px;
 	font-weight: normal;
 	margin: 0 0 25px 0;
@@ -55,7 +153,6 @@ a:visited { color: #D87563; }
 }
 .header p { font-size: 15px; line-height: 1.2em;}
 .header .lead {
-	font-family: "Open sans", Arial;
 	color: rgba(255,255,255,.9);
 	line-height: 1.2em;
 	font-size: 18px;
@@ -115,7 +212,6 @@ a:visited { color: #D87563; }
 .content {
 	position: relative;
 	z-index: 999;
-	margin-bottom:40px;
 }
 
 .jumbotron {
@@ -152,7 +248,7 @@ a:visited { color: #D87563; }
 	.header h2 { font-size: 30px; }
 	.header p { font-size: 15px; }
 
-	#illustration { margin-bottom:-180px;}
+	#illustration { margin-bottom: -80px;}
 	.expand img{ margin-bottom:200px; margin-top:-180px; }
 }
 @media (min-width: 768px) {
@@ -161,7 +257,7 @@ a:visited { color: #D87563; }
 	.header p { font-size: 15px; }
 	.header .lead { font-size:22px; }
 
-	#illustration { margin-bottom:-250px;}
+	#illustration { margin-bottom: -80px; }
 	.expand img{ margin-bottom:300px; margin-top:-190px; }
 
 }
@@ -171,7 +267,7 @@ a:visited { color: #D87563; }
 	.header h2 { margin-bottom: 40px;}
 	.header p { font-size: 15px; }
 
-	#illustration { margin-bottom:-270px;}
+	#illustration { margin-bottom: -80px; }
 	.expand img{ margin-bottom:370px; margin-top:-260px; }
 
 	.space-before { padding-top:40px; }
