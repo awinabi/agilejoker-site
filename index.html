@@ -61,13 +61,9 @@
         <!-- <p>SuperAwesome thing is currently in active development and will be released this summer.<br>
           In the meantime, please register to our waiting list to get notified first once something is launched.</p> -->
           <br>
-
-        <form class="form-inline" role="form" action="https://app.agilejoker.com/users" accept-charset="UTF-8" method="post">
-
-          <div class="form-group"><input type="email" class="form-control input-lg" id="user_email" placeholder="Your Email", value="" name="user[email]" required="required"></div>
-          <button type="submit" name="commit" class="btn btn-lg btn-danger btn-custom">Get Started</button>
-        </form>
-
+          <form action="https://app.agilejoker.com/users/sign_up">
+              <input type="submit" class="btn btn-lg btn-danger btn-custom" value="Get Started" />
+          </form>
       </div>
     </div>
     <div class="row">
@@ -101,14 +97,14 @@
         <div class="card">
           <div class="card-content">
             <p><span class="label label-info">STEP 1</span></p>
-            <h3>Team members will post their daily updates.</h3>
+            <h3>Team members will log their daily tasks.</h3>
             <p class="subtext">
-              Everyone in the team can post their update via email to the app as an answer to the following questions -
+              Everyone in the team can log their tasks to the app, following are the options for each tasks-
               <br />
               <br />
               <ul style="font-size: 15px;">
-                <li>What did you do today?</li>
-                <li>What is the plan for tomorrow?</li>
+                <li>Completed tasks today</li>
+                <li>Planned tasks for tomorrow?</li>
                 <li>What problems are causing delays?</li>
               </ul>
               &nbsp;
@@ -128,7 +124,7 @@
             </p>
             <p class="subtext">
               <br />
-              You can view the updates, and manage your team from AgileJoker. Ensures the team is in sync with everyone's updates
+              You can view the updates, and manage your team from AgileJoker.
             </p>
           </div>
         </div>
@@ -357,12 +353,9 @@
         <p class="lead text-center">
           You can create one team of 10 users with limited data retention.
         </p>
-        <p>
-          <form class="form-inline text-center" role="form" action="https://app.agilejoker.com/users" accept-charset="UTF-8" method="post">
-            <div class="form-group"><input type="email" class="form-control input-lg" id="user_email" placeholder="Your Email", value="" name="user[email]" required="required"></div>
-            <button type="submit" name="commit" class="btn btn-lg btn-danger btn-custom">Register Now</button>
-          </form>
-        </p>
+            <form action="https://app.agilejoker.com/users/sign_up" class="lead text-center">
+              <input type="submit" class="btn btn-lg btn-danger btn-custom" value="Register Now" />
+            </form>
       </div>
     </div>
   </section>
